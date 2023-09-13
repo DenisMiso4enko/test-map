@@ -1,0 +1,141 @@
+:root {
+    --max-width: 1280px;
+
+    --colot-green: #6abf4b;
+    --colot-blue: #3877ee;
+    --colot-black: #020f20;
+    --colot-white: #ffffff;
+    --color-bg: rgba(2, 15, 32, 50%);
+
+    --radius: 50%;
+    --radius-active: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-bg);
+    z-index: -1;
+}
+
+.container {
+    max-width: var(--max-width);
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--colot-white);
+    text-align: center;
+
+    border: none;
+    border-radius: var(--radius);
+    outline: none;
+
+    padding: 9px 14px;
+    font-size: 21px;
+
+    cursor: pointer;
+    opacity: 0.7;
+
+    transition: opacity 0.3s ease;
+}
+
+.active {
+    opacity: 1;
+    display: flex;
+    gap: 20px;
+    border-radius: var(--radius-active);
+}
+
+.btn-green {
+    background-color: var(--colot-green);
+}
+
+.btn-blue {
+    background-color: var(--colot-blue);
+}
+
+.info {
+    display: none;
+}
+
+.active > .info {
+    display: block;
+}
+
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6, .btn-7, .btn-8, .btn-9, .btn-10 {
+    position: absolute;
+}
+
+.btn-2, .btn-4, .btn-5, .btn-7, .btn-8, .btn-9, .btn-10 {
+    flex-direction: row-reverse;
+}
+
+.btn-1 {
+    top: 25.5%;
+    left: 30.2%;
+}
+
+.btn-2 {
+    top: 20.45%;
+    right: 26.35%;
+}
+
+.btn-3 {
+    top: 44.7%;
+    left: 35.7%;
+}
+
+.btn-4 {
+    top: 36.72%;
+    right: 38%;
+}
+
+.btn-5 {
+    top: 43.1%;
+    right: 24.2%;
+}
+
+.btn-6 {
+    top: 64.9%;
+    left: 23.2%;
+}
+
+.btn-7 {
+    top: 57.1%;
+    right: 41.5%;
+}
+
+.btn-8 {
+    top: 60.8%;
+    right: 29.8%;
+}
+
+.btn-9 {
+    top: 64.8%;
+    right: 14.8%;
+}
+
+.btn-10 {
+    top: 71.8%;
+    right: 40.2%;
+}
